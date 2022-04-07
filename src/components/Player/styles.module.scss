@@ -135,3 +135,47 @@
         }
     }
 }
+
+@media (max-width: 1450px) {
+    .playerContainer {
+        flex-direction: row;
+        justify-content: center;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 2rem 3rem;
+
+        header {
+            display: none;
+        }
+    }
+
+    .emptyPlayer {
+        display: none;
+    }
+
+    .currentEpisode {
+        display: none;
+    }
+
+    .buttons {
+        margin-top: 1.5rem;
+
+        button {
+            &.playButton {
+                width: 3rem;
+                height: 3rem;
+                border-radius: 1rem;
+                background: var(--purple-400);
+    
+                &:hover:not(:disabled) {
+                    filter: brightness(0.97);
+                }
+            }
+        }
+    }
+}

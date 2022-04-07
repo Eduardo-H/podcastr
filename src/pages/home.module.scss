@@ -7,6 +7,11 @@
         margin-top: 3rem;
         margin-bottom: 1.5rem;
     }
+
+    @media (max-width: 768px) {
+        height: 100%;
+        padding: 0 2rem;
+    }
 }
 
 .latestEpisodes {
@@ -107,10 +112,38 @@
             filter: brightness(0.97);
         }
     }
+
+    @media (max-width: 1250px) {
+        h2 {
+            margin-top: 1.5rem;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        li {
+            width: 100%;
+        }
+
+        .episodeDetails {
+            .episodeImage {
+                width: 100px !important;
+            }
+
+            p {
+                display: none;
+            }
+        }
+    }
 }
 
 .allEpisodes {
     padding-bottom: 2rem;
+    overflow-x: auto;
 
     table {
         width:100%;
@@ -166,6 +199,22 @@
                 &:hover {
                     filter: brightness(0.97);
                 }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        table {
+            white-space: nowrap;
+            
+            thead {
+                th:first-child {
+                    display: none;
+                }
+            }
+
+            td:first-child {
+                display: none;
             }
         }
     }
